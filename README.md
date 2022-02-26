@@ -1,2 +1,0 @@
-# env
-My environment configurations
