@@ -61,8 +61,7 @@ require('telescope').setup {
         }
       }
     },
-    file_browser = {
-      depth = 2,
+    find_files = {
       hidden = true,
     }
   },
@@ -269,6 +268,9 @@ noremap <space>; :
 noremap , <C-R>
 noremap <C-s> <cmd>bd<cr>
 noremap <space>cn <cmd>cn<cr>
+noremap <space>dt <cmd>windo diffthis<cr>
+noremap <space>do <cmd>diffoff!<cr>
+noremap <space>rl <cmd>execute getline('.')<cr>
 
 command! FormatPrettier %!prettier --stdin-filepath %
 
