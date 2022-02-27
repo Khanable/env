@@ -47,7 +47,21 @@ EOF
 lua << EOF
 local actions = require('telescope.actions')
 local actionSet = require('telescope.actions.set')
-require('telescope').setup {
+local telescope = require('telescope')
+telescope.setup {
+  defaults = {
+    --Should load the defaults from telescope and just add --hidden
+    vimgrep_arguments = {
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--hidden"
+    }
+  },
   pickers = {
     buffers = {
       sort_mru = true,
@@ -63,15 +77,8 @@ require('telescope').setup {
     },
     find_files = {
       hidden = true,
-    }
+    },
   },
-  defaults = {
-    mappings = {
-      n = {
-        [";f"] = actions.close,
-      },
-    }
-  }
 }
 EOF
 
