@@ -390,3 +390,5 @@ require 'lspconfig'.sumneko_lua.setup {
 --map <expr> F reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_F" : "F"
 --map <expr> t reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_t" : "t"
 --map <expr> T reg_recording() . reg_executing() == "" ? "<Plug>Lightspeed_T" : "T"
+
+vim.cmd.colorscheme('desert')
